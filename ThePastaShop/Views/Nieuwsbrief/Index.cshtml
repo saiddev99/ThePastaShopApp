@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+@model PersoonViewModel
+
+<h2>Schrijf hier in voor onze nieuwsbrief</h2>
+
+<form asp-action="Confirmatie" method="get" class="nieuwsbrief-form">
+    <label asp-for="Naam"></label>
+    <span asp-validation-for="Naam">*</span>
+    <input asp-for="Naam">
+
+    <label asp-for="Voornaam"></label>
+    <span asp-validation-for="Voornaam">*</span>
+    <input asp-for="Voornaam">
+
+    <label asp-for="Email"></label>
+    <span asp-validation-for="Email">*</span>
+    <input asp-for="Email">
+
+    <label asp-for="Telefoon"></label>
+    <span asp-validation-for="Telefoon">*</span>
+    <input asp-for="Telefoon">
+
+    <label asp-for="GeboorteDatum"></label>
+    <span asp-validation-for="GeboorteDatum">*</span>
+    <input asp-for="GeboorteDatum">
+
+    <div asp-validation-summary="All">Validations: </div>
+    <input class="btn btn-primary greenbutton" type="submit" name="name" value="Inschrijven" />
+</form>
+
+
+

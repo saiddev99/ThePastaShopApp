@@ -1,0 +1,76 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+select {
+    display: block;
+    margin: 0.5rem 0; 
+    font-size: 1.25rem;
+    background-color:rgb(255, 234, 200);
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    width: 15%;
+}
+
+.BestelForm {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.BestelForm label {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.greenbutton {
+    background-color: rgb(18, 177, 0);
+    margin-top: 0.5rem;
+    width: fit-content;
+}
+
+.nieuwsbrief-form input {
+    display:block;
+    margin-bottom: 0.5rem;
+}
+
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}

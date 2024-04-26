@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model string
+
+@{
+    if (Model is null)
+    {
+        <div class="text-center">
+            <h1 class="display-4">Welcome to The Pasta Shop</h1>
+        </div>
+    }
+    else
+    {
+        <div class="text-center">
+            <h1 class="display-4">@Model</h1>
+            <p class="lead">The Pasta Shop bedankt u voor uw bestelling !</p>
+        </div>
+    }
+
+}

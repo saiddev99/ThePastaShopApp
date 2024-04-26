@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Bestelling";
+}
+
+<link href="Index.styles.css" rel="stylesheet">
+
+@model PastaModel
+
+<form asp-controller="Mandje" asp-action="Add" method="post" class="BestelForm">
+    <label asp-for="Naam"></label>
+    @Html.DropDownListFor(x => x.Naam, new SelectList(Enum.GetNames(typeof(PastaNaam))))
+
+    <label asp-for="Grootte"></label>
+    @Html.DropDownListFor(x => x.Grootte, new SelectList(Enum.GetNames(typeof(Grootte))))
+
+    <label asp-for="Saus"></label>
+    @Html.DropDownListFor(x => x.Saus, new SelectList(Enum.GetNames(typeof(Saus))))
+
+    <input class="btn btn-primary greenbutton" type="submit" name="basket" value="Voeg bestelling toe" />
+</form>
+

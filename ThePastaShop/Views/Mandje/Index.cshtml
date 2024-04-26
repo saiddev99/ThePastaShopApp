@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Mandje";
+}
+
+@model List<PastaModel>
+
+<h2>Overzicht bestellingen</h2>
+
+@{
+    if (Model is null)
+    {
+        <p class="lead">@ViewBag.leeg</p>
+    }
+    else
+    {
+        <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Pastasoort</th>
+                <th>Grootte</th>
+                <th>Saus</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Naam</td>
+                     <td>@item.Grootte</td>
+                     <td>@item.Saus</td>
+                </tr>
+            }
+        
+        </tbody>
+        </table>
+        <a asp-action="Confirmatie" class="btn btn-primary greenbutton">Bestelling(en) doorsturen</a>
+    }
+}
+<a href="#"></a>
+
